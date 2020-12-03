@@ -72,7 +72,7 @@ jobs:
 workflows:
   node-android-ios:
     jobs:
-      - node
+      - node:
           filters:
             branches:
               only: development
