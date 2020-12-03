@@ -37,7 +37,7 @@ jobs:
       - store_artifacts:
           path: test-results
             
-  android-build-and-test:
+  android-beta:
     working_directory: ~/demo-react-native/android
     docker:
       - image: circleci/android:api-29-node
@@ -59,9 +59,9 @@ jobs:
             - vendor/bundle
 
       - run:
-          name: fastlane android alpha
+          name: fastlane android beta
           command:
-            bundle exec fastlane alpha
+            bundle exec fastlane beta
 
       - store_artifacts:
           path: app/build/outputs/apk/release/app-release.apk
