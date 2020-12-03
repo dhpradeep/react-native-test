@@ -73,9 +73,9 @@ workflows:
   node-android-ios:
     jobs:
       - node
-        filters:
-          branches:
-            only: development
+          filters:
+            branches:
+              only: development
       - android-build-and-test:
           requires:
             - node
